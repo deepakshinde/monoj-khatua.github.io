@@ -94,13 +94,13 @@ playerInstance.onAdComplete(function(event){
         playerInstance.remove();
     });
 
-$("body").mouseover(function({
+$("body").mouseover(function(){
     unmute();
     console.log("unmute");
-}));
+});
 
 
-$("body").mouseout(function({
+$("body").mouseout(function(){
     mute();
     console.log("mute");
-}));
+});
