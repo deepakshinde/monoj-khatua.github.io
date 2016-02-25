@@ -99,7 +99,6 @@ $("body").mouseover(function(){
     console.log("unmute");
 });
 
-
 $("body").mouseout(function(){
     mute();
     console.log("mute");
