@@ -93,3 +93,14 @@ playerInstance.onAdComplete(function(event){
         parent_cb('end');
         playerInstance.remove();
     });
+
+$("body").mouseover(function({
+    unmute();
+    console.log("unmute");
+}));
+
+
+$("body").mouseout(function({
+    mute();
+    console.log("mute");
+}));
