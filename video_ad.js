@@ -58,7 +58,9 @@ var tpl2 = '<!DOCTYPE html>' +
     'var parent_cb = window.parent["' + iframe_id + '"];' +
     'document.addEventListener("DOMContentLoaded", function() { parent_cb("loaded"); });' +
     '</scr' + 'ipt>' +
+    '<div id="vid_wrapper">' +
     '<div id="video-container" style="position:absolute;top:0px;left:0px;z-index:1;background-color:black" onmouseover="unmute()" onmouseout="mute()">' +
+    '</div>' +
     '</div>' +
     '<scr' + 'ipt type="text/javascript" src="//code.jquery.com/jquery-1.12.1.min.js"></scr' + 'ipt>' +
     '<scr' + 'ipt type="text/javascript" src="//monoj-khatua.github.io/video_ad2.js"></scr' + 'ipt>' +

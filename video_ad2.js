@@ -90,8 +90,10 @@ playerInstance.onAdImpression(function(event) {
 
 playerInstance.onAdComplete(function(event){
         console.log("Ad Completed");
-        parent_cb('end');
+        $("#vid_wrapper").slideUp(function(){ 
         playerInstance.remove();
+        parent_cb('end');
+        });
     });
 
 $("body").mouseover(function(){
