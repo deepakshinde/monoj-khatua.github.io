@@ -14,7 +14,7 @@ function simulateEnd() {
     }, 30000);
 }
 
-var fallbacks = ["http://ad3.liverail.com/?LR_PUBLISHER_ID=1331&LR_CAMPAIGN_ID=229&LR_SCHEMA=vast2","//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"];
+var fallbacks = ["http://s3.amazonaws.com/openplatform-apps/55cda2f5646b753fe100000e-vast.xml","//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"];
 
 var playerInstance = jwplayer("video-container");
 
