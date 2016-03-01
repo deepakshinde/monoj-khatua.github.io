@@ -5,35 +5,6 @@
 
 var state = "";
 
-function simulateEnd() {
-    setTimeout(function() {
-        $("video").slideUp(1000, function() {
-            state = "end";
-            parent_cb("end");
-        });
-    }, 30000);
-}
-
-var fallbacks = ["http://s3.amazonaws.com/openplatform-apps/55cda2f5646b753fe100000e-vast.xml","//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"];
-
-var playerInstance = jwplayer("video-container");
-
-playerInstance.setup({
-    file: "//content.jwplatform.com/videos/bkaovAYt-640.mp4",
-    image: "/customer/portal/attachments/268131",
-    width: '100%',
-    height: '100%',
-    stretching: 'exactfit',
-    //controls: false,
-    controlbar: 'none',
-    icons: false,
-    mute: true,
-    aspectratio: '16:9',
-    advertising: {
-    client: "vast",
-    tag: fallbacks
-    }});
-playerInstance.setMute(true);
 function parent_cmd(cmd) {
     console.log("From parent: ", cmd);
     if (state === "end") {
@@ -52,13 +23,37 @@ function parent_cmd(cmd) {
     }
 }
 
-function myFunction(){
-    playerInstance.play(false);
+function simulateEnd() {
+    setTimeout(function() {
+        $("video").slideUp(1000, function() {
+            state = "end";
+            parent_cb("end");
+        });
+    }, 30000);
 }
 
-function myFunctionplay(){
-    playerInstance.play(true); 
-}
+var fallbacks = ["//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test","http://ad3.liverail.com/?LR_PUBLISHER_ID=1331&LR_CAMPAIGN_ID=229&LR_SCHEMA=vast2"];
+
+var playerInstance = jwplayer("video-container");
+
+playerInstance.setup({
+    file: "//content.jwplatform.com/videos/bkaovAYt-640.mp4",
+    image: "/customer/portal/attachments/268131",
+    width: '100%',
+    height: '100%',
+    stretching: 'exactfit',
+    //controls: false,
+    //controlbar: 'none',
+    icons: false,
+    mute: true,
+    aspectratio: '16:9',
+    advertising: {
+    client: "vast",
+    tag: fallbacks
+    }});
+
+playerInstance.setMute(true);
+
 
 function mute(){
     playerInstance.setMute(true);
@@ -66,7 +61,7 @@ function mute(){
 
 function unmute(){
     playerInstance.setMute(false);
-} 
+}
 
 var index = 0;
 playerInstance.onAdError(function(event) {
@@ -78,6 +73,7 @@ playerInstance.onAdError(function(event) {
     } else {
         html += event.tag+" has failed, with no more fallbacks available.<br>";
         console.log(html);
+        parent_cb("end");
          }
     });
 
@@ -90,10 +86,8 @@ playerInstance.onAdImpression(function(event) {
 
 playerInstance.onAdComplete(function(event){
         console.log("Ad Completed");
-        $("#vid_wrapper").slideUp(1000, function(){ 
-        playerInstance.remove();
+        //playerInstance.remove();
         parent_cb('end');
-        });
     });
 
 $("body").mouseover(function(){
@@ -105,3 +99,4 @@ $("body").mouseout(function(){
     mute();
     console.log("mute");
 });
+
