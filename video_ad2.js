@@ -43,7 +43,7 @@ console.log(rb_vastTag[0]);
 var playerInstance = jwplayer("video-container");
 playerInstance.setup({
     file: "//content.jwplatform.com/videos/bkaovAYt-640.mp4",
-    image: "/customer/portal/attachments/268131",
+    //image: "/customer/portal/attachments/268131",
     width: '100%',
     height: '100%',
     stretching: 'exactfit',
@@ -75,7 +75,7 @@ var index = 0;
 playerInstance.onAdError(function(event) {
     console.log("AdError");
     console.log(event.message);
-    var html = log.innerHTML;
+    /*var html = log.innerHTML;
     if(index < fallbacks.length) {
         html += event.tag+" was empty, loading fallback tag "+(index+1)+".<br>";
         console.log(html);
@@ -84,8 +84,14 @@ playerInstance.onAdError(function(event) {
         html += event.tag+" has failed, with no more fallbacks available.<br>";
         console.log(html);
         parent_cb("end");
-         }
+         }*/
+    parent_cb("end");
     });
+
+playerInstance.on("complete",function(){
+    console.log("Video Compete");
+    parent_cb("end");
+});
 
 playerInstance.onAdImpression(function(event) {
     var html = log.innerHTML;
