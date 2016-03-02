@@ -4,6 +4,7 @@
  */
 
 var state = "";
+var rb_vastTag = [];
 
 function parent_cmd(cmd) {
     console.log("From parent: ", cmd);
@@ -34,11 +35,12 @@ function simulateEnd() {
 
 //var fallbacks =["http://demo.tremorvideo.com/proddev/vast/vast1RegularLinear.xml"]
 //Liverail
-var fallbacks =["http://dspbuilder.rubiconproject.com/vast?cid=56d039ea70726f2631000005&userid=123213&t=imp&oid=55a5e2a370726f07db010000&aid=56d439be70726f0e77000001&bid_id=43434&impid=213123&auctionid=1231231&exchange=rubicon&price=0.023&dc=us-west&ct=0"]
+//var fallbacks =["http://dspbuilder.rubiconproject.com/vast?cid=56d039ea70726f2631000005&userid=123213&t=imp&oid=55a5e2a370726f07db010000&aid=56d439be70726f0e77000001&bid_id=43434&impid=213123&auctionid=1231231&exchange=rubicon&price=0.023&dc=us-west&ct=0"]
 //var fallbacks = ["http://dspbuilder.rubiconproject.com/track?cid=56d039ea70726f2631000005&userid=${USERID}&t=imp&oid=55a5e2a370726f07db010000&aid=55e6f99e70726f705000000b&&rurl=http%3A%2F%2Fs3.amazonaws.com%2Fopenplatform-apps%2F55e6f99e70726f705000000b-%2456d039ea70726f2631000005.xml","//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"];
 
+rb_vastTag = window.parent._rbVastTag;
+console.log(rb_vastTag[0]);
 var playerInstance = jwplayer("video-container");
-
 playerInstance.setup({
     file: "//content.jwplatform.com/videos/bkaovAYt-640.mp4",
     image: "/customer/portal/attachments/268131",
@@ -55,7 +57,7 @@ playerInstance.setup({
     },
     advertising: {
     client: "vast",
-    tag: fallbacks
+    tag: rb_vastTag
     }});
 
 playerInstance.setMute(true);
