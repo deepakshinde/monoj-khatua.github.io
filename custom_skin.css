@@ -1,0 +1,284 @@
+/* W3C */
+/* icons */
+/* doc */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+.jw-icon {
+  font-family: 'jw-icons';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  background-color: transparent;
+  font-variant: normal;
+  /* Enable Ligatures ================ */
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Mixin for common skin styles with variable colors */
+.jw-skin-custom_skin {
+  /* Controlbar styles */
+  /* Contains icons, time text, and slider */
+  /* Playlist container - need second background-color declaration to overwrite the .jw-background-color class */
+  /* ul container */
+  /* Playlist title */
+  /* Colors, padding for icons and text */
+  /* Styles for play button on idle */
+  /* Rail/slider styles */
+  /* Timeline and horizontal volume slider */
+  /* Volume slider */
+  /* Volume slider container */
+  /* Color of video's duration time */
+  /* Icon borders on the right side of the controlbar */
+  /* Icons, text and container styles for the dock, in the upper right corner */
+  /* Styles for active list items */
+  /* A min-width on the volume icon to keep the width from collapsing on toggle */
+  /* For the overlay containers */
+  /* Position and padding of slider thumbnail */
+  /* Position of remaining overlay containers */
+  /* Skip icon and text styles */
+}
+.jw-skin-custom_skin .jw-background-color {
+  background: #000;
+}
+.jw-skin-custom_skin .jw-controlbar {
+  border-top: #333 1px solid;
+  height: 2.5em;
+}
+.jw-skin-custom_skin .jw-group {
+  vertical-align: middle;
+}
+.jw-skin-custom_skin .jw-playlist {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.jw-skin-custom_skin .jw-playlist-container {
+  left: -43%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* li list option */
+  /* play icon is always active */
+}
+.jw-skin-custom_skin .jw-playlist-container .jw-option {
+  border-bottom: 1px solid #444;
+  /* Playlist items are black when active, or hovered */
+  /* Number color when li is hovered */
+}
+.jw-skin-custom_skin .jw-playlist-container .jw-option:hover,
+.jw-skin-custom_skin .jw-playlist-container .jw-option.jw-active-option {
+  background-color: black;
+}
+.jw-skin-custom_skin .jw-playlist-container .jw-option:hover .jw-label {
+  color: #FF0046;
+}
+.jw-skin-custom_skin .jw-playlist-container .jw-icon-playlist {
+  margin-left: 0;
+}
+.jw-skin-custom_skin .jw-playlist-container .jw-label .jw-icon-play {
+  color: #FF0046;
+}
+.jw-skin-custom_skin .jw-playlist-container .jw-label .jw-icon-play:before {
+  padding-left: 0;
+}
+.jw-skin-custom_skin .jw-tooltip-title {
+  background-color: #000;
+  color: #fff;
+}
+.jw-skin-custom_skin .jw-text {
+  color: #fff;
+}
+.jw-skin-custom_skin .jw-button-color {
+  color: #fff;
+}
+.jw-skin-custom_skin .jw-button-color:hover {
+  color: #FF0046;
+}
+.jw-skin-custom_skin .jw-toggle {
+  color: #FF0046;
+}
+.jw-skin-custom_skin .jw-toggle.jw-off {
+  color: #fff;
+}
+.jw-skin-custom_skin .jw-controlbar .jw-icon:before,
+.jw-skin-custom_skin .jw-text-elapsed,
+.jw-skin-custom_skin .jw-text-duration {
+  padding: 0 .7em;
+}
+.jw-skin-custom_skin .jw-controlbar .jw-icon-prev:before {
+  padding-right: 0.25em;
+}
+.jw-skin-custom_skin .jw-controlbar .jw-icon-playlist:before {
+  padding: 0 0.45em;
+}
+.jw-skin-custom_skin .jw-controlbar .jw-icon-next:before {
+  padding-left: 0.25em;
+}
+.jw-skin-custom_skin .jw-icon-prev,
+.jw-skin-custom_skin .jw-icon-next {
+  font-size: .7em;
+}
+.jw-skin-custom_skin .jw-icon-prev:before {
+  border-left: 1px solid #666;
+}
+.jw-skin-custom_skin .jw-icon-next:before {
+  border-right: 1px solid #666;
+}
+.jw-skin-custom_skin .jw-icon-display {
+  color: #fff;
+}
+.jw-skin-custom_skin .jw-icon-display:before {
+  padding-left: 0;
+}
+.jw-skin-custom_skin .jw-display-icon-container {
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+.jw-skin-custom_skin .jw-rail {
+  background-color: #384154;
+  box-shadow: none;
+}
+.jw-skin-custom_skin .jw-buffer {
+  background-color: #666F82;
+}
+.jw-skin-custom_skin .jw-progress {
+  background: #FF0046;
+}
+.jw-skin-custom_skin .jw-knob {
+  width: .6em;
+  height: .6em;
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 1px #000000;
+  border-radius: 1em;
+}
+.jw-skin-custom_skin .jw-slider-horizontal .jw-slider-container {
+  height: 0.95em;
+}
+.jw-skin-custom_skin .jw-slider-horizontal .jw-rail,
+.jw-skin-custom_skin .jw-slider-horizontal .jw-buffer,
+.jw-skin-custom_skin .jw-slider-horizontal .jw-progress {
+  height: .2em;
+  border-radius: 0;
+}
+.jw-skin-custom_skin .jw-slider-horizontal .jw-knob {
+  top: -0.2em;
+}
+.jw-skin-custom_skin .jw-slider-horizontal .jw-cue {
+  top: -0.05em;
+  width: .3em;
+  height: .3em;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.jw-skin-custom_skin .jw-slider-vertical .jw-rail,
+.jw-skin-custom_skin .jw-slider-vertical .jw-buffer,
+.jw-skin-custom_skin .jw-slider-vertical .jw-progress {
+  width: .2em;
+}
+.jw-skin-custom_skin .jw-slider-vertical .jw-knob {
+  margin-bottom: -0.3em;
+}
+.jw-skin-custom_skin .jw-volume-tip {
+  width: 100%;
+  left: -45%;
+  padding-bottom: .7em;
+}
+.jw-skin-custom_skin .jw-text-duration {
+  color: #666F82;
+}
+.jw-skin-custom_skin .jw-controlbar-right-group .jw-icon-tooltip:before,
+.jw-skin-custom_skin .jw-controlbar-right-group .jw-icon-inline:before {
+  border-left: 1px solid #666;
+}
+.jw-skin-custom_skin .jw-controlbar-right-group .jw-icon-inline:first-child:before {
+  border: none;
+}
+.jw-skin-custom_skin .jw-dock .jw-dock-button {
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+.jw-skin-custom_skin .jw-dock .jw-overlay {
+  border-radius: 2.5em;
+}
+.jw-skin-custom_skin .jw-icon-tooltip .jw-active-option {
+  background-color: #FF0046;
+  color: #fff;
+}
+.jw-skin-custom_skin .jw-icon-volume {
+  min-width: 2.6em;
+}
+.jw-skin-custom_skin .jw-time-tip,
+.jw-skin-custom_skin .jw-menu,
+.jw-skin-custom_skin .jw-volume-tip,
+.jw-skin-custom_skin .jw-skip {
+  border: 1px solid #333;
+}
+.jw-skin-custom_skin .jw-time-tip {
+  padding: 0.2em;
+  bottom: 1.3em;
+}
+.jw-skin-custom_skin .jw-menu,
+.jw-skin-custom_skin .jw-volume-tip {
+  bottom: .24em;
+}
+.jw-skin-custom_skin .jw-skip {
+  padding: 0.4em;
+  border-radius: 1.75em;
+}
+.jw-skin-custom_skin .jw-skip .jw-text,
+.jw-skin-custom_skin .jw-skip .jw-icon-inline {
+  color: #fff;
+  line-height: 1.75em;
+}
+.jw-skin-custom_skin .jw-skip.jw-skippable:hover .jw-text,
+.jw-skin-custom_skin .jw-skip.jw-skippable:hover .jw-icon-inline {
+  color: #FF0046;
+}
+.jw-skin-custom_skin.jw-flag-touch .jw-controlbar .jw-icon:before,
+.jw-skin-custom_skin.jw-flag-touch .jw-text-elapsed,
+.jw-skin-custom_skin.jw-flag-touch .jw-text-duration {
+  padding: 0 .35em;
+}
+.jw-skin-custom_skin.jw-flag-touch .jw-controlbar .jw-icon-prev:before {
+  padding: 0 0.125em 0 0.7em;
+}
+.jw-skin-custom_skin.jw-flag-touch .jw-controlbar .jw-icon-next:before {
+  padding: 0 0.7em 0 0.125em;
+}
+.jw-skin-custom_skin.jw-flag-touch .jw-controlbar .jw-icon-playlist:before {
+  padding: 0 .225em;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-preview,
+.jw-skin-custom_skin.jw-flag-ads .jw-dock {
+  display: none;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar {
+  backgound-color: #00FFFFFF;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-inline,
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-tooltip,
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-playback,
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-text,
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-slider-volume,
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-fullscreen,
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-slider-horizontal {
+  display: none;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-volume {
+  display: inline-block;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-text-alt {
+  display: inline;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-inline.jw-icon-volume {
+  display: inline-block;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-tooltip.jw-icon-volume {
+  display: none;
+}
+.jw-skin-custom_skin.jw-flag-ads .jw-logo,
+.jw-skin-custom_skin.jw-flag-ads .jw-captions {
+  display: none;
+}

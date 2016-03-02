@@ -86,7 +86,7 @@ function main() {
         '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,600italic,400italic" rel="stylesheet" type="text/css">'+
         '<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">' +
         '<link href="//desk-customers.s3.amazonaws.com/jwplayer/css/main.css" rel="stylesheet">' +
-        '<link href="myskin.css" rel="stylesheet">' +
+        '<link href="//monoj-khatua.github.io/custom_skin.css" rel="stylesheet">' +
         '</head>' +
         '<body class="simple">' +
         '<scr' + 'ipt type="text/javascript">' +
@@ -96,7 +96,7 @@ function main() {
         '<div id="video-container" style="position:absolute;top:0px;left:0px;z-index:1;background-color:black" onmouseover="unmute()" onmouseout="mute()">' +
         '</div>' +
         '<scr' + 'ipt type="text/javascript" src="//code.jquery.com/jquery-1.12.1.min.js"></scr' + 'ipt>' +
-        '<scr' + 'ipt type="text/javascript" src="//monojk-rbweb/video_ad2.js?ord='+ord +'"></scr' + 'ipt>' +
+        '<scr' + 'ipt type="text/javascript" src="//monoj-khatua.github.io/video_ad2.js?ord='+ord +'"></scr' + 'ipt>' +
         '</body>' +
         '</html>';
 

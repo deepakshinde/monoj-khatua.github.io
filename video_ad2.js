@@ -32,7 +32,10 @@ function simulateEnd() {
     }, 30000);
 }
 
-var fallbacks = ["//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test","http://ad3.liverail.com/?LR_PUBLISHER_ID=1331&LR_CAMPAIGN_ID=229&LR_SCHEMA=vast2"];
+//var fallbacks =["http://demo.tremorvideo.com/proddev/vast/vast1RegularLinear.xml"]
+//Liverail
+var fallbacks =["http://dspbuilder.rubiconproject.com/vast?cid=56d039ea70726f2631000005&userid=123213&t=imp&oid=55a5e2a370726f07db010000&aid=56d439be70726f0e77000001&bid_id=43434&impid=213123&auctionid=1231231&exchange=rubicon&price=0.023&dc=us-west&ct=0"]
+//var fallbacks = ["http://dspbuilder.rubiconproject.com/track?cid=56d039ea70726f2631000005&userid=${USERID}&t=imp&oid=55a5e2a370726f07db010000&aid=55e6f99e70726f705000000b&&rurl=http%3A%2F%2Fs3.amazonaws.com%2Fopenplatform-apps%2F55e6f99e70726f705000000b-%2456d039ea70726f2631000005.xml","//www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"];
 
 var playerInstance = jwplayer("video-container");
 
@@ -47,6 +50,9 @@ playerInstance.setup({
     icons: false,
     mute: true,
     aspectratio: '16:9',
+    skin: {
+        name: "custom_skin"
+    },
     advertising: {
     client: "vast",
     tag: fallbacks
@@ -65,6 +71,8 @@ function unmute(){
 
 var index = 0;
 playerInstance.onAdError(function(event) {
+    console.log("AdError");
+    console.log(event.message);
     var html = log.innerHTML;
     if(index < fallbacks.length) {
         html += event.tag+" was empty, loading fallback tag "+(index+1)+".<br>";
