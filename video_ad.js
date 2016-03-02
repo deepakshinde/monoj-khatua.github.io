@@ -53,6 +53,84 @@ function main() {
         frame.contentWindow.parent_cmd(cmd);
     }
 
+
+    /* main visibility API function 
+     check if current tab is active or not*/
+    var tab_visibility = (function(){
+        var stateKey, 
+            eventKey, 
+            keys = {
+                    hidden: "visibilitychange",
+                    webkitHidden: "webkitvisibilitychange",
+                    mozHidden: "mozvisibilitychange",
+                    msHidden: "msvisibilitychange"
+        };
+        for (stateKey in keys) {
+            if (stateKey in document) {
+                eventKey = keys[stateKey];
+                break;
+            }
+        }
+        return function(c) {
+            if (c) document.addEventListener(eventKey, c);
+            return !document[stateKey];
+        }
+    })();
+    
+    /* check if current tab is active or not*/
+    tab_visibility(function(){
+        if(tab_visibility()){  
+              setTimeout(function(){ 
+                send_iframe_cmd("play");
+            },300);     
+                                                    
+        } else {
+            send_iframe_cmd("pause");
+        }
+    });
+    
+    
+    /* check if browser window has focus*/        
+    var notIE = (document.documentMode === undefined),
+        isChromium = window.chrome;
+          
+    if (notIE && !isChromium) {
+    
+        // checks for Firefox and other  NON IE Chrome versions
+        $(window).on("focusin", function () { 
+            
+            setTimeout(function(){      
+                send_iframe_cmd("play");
+            },300);
+        }).on("focusout", function () {
+            send_iframe_cmd("pause");
+        });
+    
+    } else {
+        // checks for IE and Chromium versions
+        if (window.addEventListener) {
+            window.addEventListener("focus", function (event) {
+                setTimeout(function(){                 
+                     send_iframe_cmd("play");
+                },300);
+            }, false);
+    
+            window.addEventListener("blur", function (event) {
+                send_iframe_cmd("pause");
+            }, false);
+        } else {
+            window.attachEvent("focus", function (event) {
+                setTimeout(function(){                 
+                     send_iframe_cmd("play");
+                },300);
+            });
+    
+            window.attachEvent("blur", function (event) {
+                send_iframe_cmd("pause");
+            });
+        }
+    }
+
     function checkScroll() {
         var off = $("#canary_" + iframe_id).offset(),
             x = off.left, y = off.top, w = width, h = height, r = x + w,
