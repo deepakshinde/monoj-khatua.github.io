@@ -18,11 +18,11 @@ script_add("//code.jquery.com/jquery-1.12.1.min.js", function(err) {
         console.log("Ad loader: could not load jquery");
         return;
     }
-    
+
     $ = window["jQuery"].noConflict(true);
     main();
 });
- 
+
 function main() {
 
     var frame = document.querySelectorAll("#" + iframe_id)[0];
