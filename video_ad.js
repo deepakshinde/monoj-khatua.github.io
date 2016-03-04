@@ -40,7 +40,15 @@ function main() {
                 $("#div_" + iframe_id).remove();
                 state = "init";
             });
-        } else {
+        } else if (ev === "error") {
+            $("#div_" + iframe_id).remove();
+            state = "init";
+        }else if(ev === "started"){
+            $("#div_" + iframe_id).slideDown(1000, function(){
+                state = "started";
+                checkScroll();
+            });
+        }else {
             state = ev;
         }
     };
@@ -82,8 +90,7 @@ function main() {
         if(tab_visibility()){  
               setTimeout(function(){ 
                 send_iframe_cmd("play");
-            },300);     
-                                                    
+            },300);
         } else {
             send_iframe_cmd("pause");
         }
@@ -144,11 +151,14 @@ function main() {
 
         if (visible > fraction) {
             if (state === "loaded") {
-                $("#div_" + iframe_id).slideDown(1000, function() {
+                /*$("#div_" + iframe_id).slideDown(1000, function() {
                     state = "ready";
                     send_iframe_cmd("play");
-                });
-            } else if (state !== "play") {
+                });*/
+                state = "ready";
+                send_iframe_cmd("start");
+
+            } else if (state !== "ready" && state !== "play") {
                 send_iframe_cmd("play");
             }
         } else if (state === "play") {
@@ -171,7 +181,7 @@ function main() {
         'var parent_cb = window.parent["' + iframe_id + '"];' +
         'document.addEventListener("DOMContentLoaded", function() { parent_cb("loaded"); });' +
         '</scr' + 'ipt>' +
-        '<div id="video-container" style="position:absolute;top:0px;left:0px;z-index:1;background-color:black" onmouseover="unmute()" onmouseout="mute()">' +
+        '<div id="video-container" style="position:absolute;top:0px;left:0px;z-index:1;background-color:black">' +
         '</div>' +
         '<scr' + 'ipt type="text/javascript" src="//code.jquery.com/jquery-1.12.1.min.js"></scr' + 'ipt>' +
         '<scr' + 'ipt type="text/javascript" src="//monoj-khatua.github.io/video_ad2.js?ord='+ord +'"></scr' + 'ipt>' +

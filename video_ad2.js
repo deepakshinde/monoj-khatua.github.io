@@ -19,6 +19,8 @@ function parent_cmd(cmd) {
         state = "pause";
         playerInstance.play(false);
         parent_cb(cmd);
+    } else if (cmd === "start") {
+        playerInstance.play(true);
     } else {
         console.log("Unknown command from parent");
     }
@@ -51,6 +53,7 @@ playerInstance.setup({
     //controlbar: 'none',
     icons: false,
     mute: true,
+    primary: 'flash',
     aspectratio: '16:9',
     skin: {
         name: "custom_skin"
@@ -94,13 +97,18 @@ playerInstance.on("complete",function(){
 });
 
 playerInstance.onAdImpression(function(event) {
-    var html = log.innerHTML;
-    html +="Success! Ad tag number "+ (index+1) +" is now playing!</br>";
+    var html ="Success! Ad tag number "+ (index+1) +" is now playing!</br>";
+    parent_cb("started");
+    playerInstance.play(false);
     console.log(html);
-    //log.innerHTML = html;
     });
 
-playerInstance.onAdComplete(function(event){
+playerInstance.on("adBlock",function(){
+    console.log("AdBlocked");
+    parent_cb("error");
+});
+
+playerInstance.on("adComplete", function(event){
         console.log("Ad Completed");
         //playerInstance.remove();
         parent_cb('end');
