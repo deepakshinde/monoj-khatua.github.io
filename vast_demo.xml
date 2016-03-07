@@ -33,7 +33,7 @@
                      <ClickTracking><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=55a668d870726f6e51010000&t=firstQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></ClickTracking>
                   </VideoClicks>
                   <MediaFiles>
-                      <MediaFile delivery="progressive" bitrate="650" width="1024" height="768" type="video/mp4"><![CDATA[http://monoj-khatua.github.io]]></MediaFile>
+                      <MediaFile delivery="progressive" bitrate="650" width="1024" height="768" type="video/mp4"><![CDATA[http://monoj-khatua.github.io/demo.mp4]]></MediaFile>
                   </MediaFiles>
                </Linear>
             </Creative>
