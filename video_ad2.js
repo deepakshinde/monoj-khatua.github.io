@@ -53,7 +53,7 @@ playerInstance.setup({
     //controlbar: 'none',
     icons: false,
     mute: true,
-    primary: 'flash',
+    //primary: 'flash',
     aspectratio: '16:9',
     skin: {
         name: "custom_skin"
