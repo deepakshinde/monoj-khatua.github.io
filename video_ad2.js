@@ -102,12 +102,12 @@ playerInstance.onAdImpression(function(event) {
     playerInstance.play(false);
     console.log(html);
     });
-
+/*
 playerInstance.on("adBlock",function(){
     console.log("AdBlocked");
     parent_cb("error");
 });
-
+*/
 playerInstance.on("adComplete", function(event){
         console.log("Ad Completed");
         //playerInstance.remove();
