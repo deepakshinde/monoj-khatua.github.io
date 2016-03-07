@@ -11,7 +11,7 @@ var iframe_id = "rbvideo_" + ord,
     tpl = '<div id="canary_' + iframe_id + '"></div><div style="margin: 0; padding: 0; overflow: hidden; display:none" id="div_' + iframe_id + '"><iframe id="' + iframe_id + '" frameborder="0" width="' + width + '" height="' + height + '"></iframe></div>',
     state = "init",
     $ = undefined;
-
+var player="init";
 document.write(tpl);
 script_add("//code.jquery.com/jquery-1.12.1.min.js", function(err) {
     if (err) {
@@ -40,6 +40,8 @@ function main() {
                 $("#div_" + iframe_id).remove();
                 state = "init";
             });
+        } else if (ev === "ready") {
+            player = "ready";
         } else if (ev === "error") {
             $("#div_" + iframe_id).remove();
             state = "init";
@@ -93,6 +95,7 @@ function main() {
             },300);
         } else {
             send_iframe_cmd("pause");
+            console.log("Out of tab");
         }
     });
     
@@ -150,7 +153,7 @@ function main() {
         visible = visibleX * visibleY / (w * h);
 
         if (visible > fraction) {
-            if (state === "loaded") {
+            if (state === "loaded" && player === "ready") {
                 /*$("#div_" + iframe_id).slideDown(1000, function() {
                     state = "ready";
                     send_iframe_cmd("play");

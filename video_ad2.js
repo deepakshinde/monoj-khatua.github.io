@@ -75,7 +75,7 @@ function unmute(){
 }
 
 var index = 0;
-playerInstance.onAdError(function(event) {
+playerInstance.on("AdError" ,function(event) {
     console.log("AdError");
     console.log(event.message);
     /*var html = log.innerHTML;
@@ -108,6 +108,22 @@ playerInstance.on("adBlock",function(){
     parent_cb("error");
 });
 */
+playerInstance.on("complete",function(){
+    console.log("Video Compete");
+    parent_cb("end");
+});
+
+playerInstance.on("setupError",function(){
+    console.log("Video setup error");
+    parent_cb("error");
+});
+
+playerInstance.on("ready",function(){
+    console.log("Video ready");
+    parent_cb("ready");
+});
+
+
 playerInstance.on("adComplete", function(event){
         console.log("Ad Completed");
         //playerInstance.remove();
