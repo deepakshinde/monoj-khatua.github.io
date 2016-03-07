@@ -33,7 +33,7 @@
                      <ClickTracking><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=55a668d870726f6e51010000&t=firstQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></ClickTracking>
                   </VideoClicks>
                   <MediaFiles>
-                     <MediaFile delivery="progressive" bitrate="650" width="1024" height="768" type="video/mp4"><![CDATA[http://s3.amazonaws.com/openplatform-apps/52433aa0-2a10-0133-7bfe-7a163ef27e04]]></MediaFile>
+                      <MediaFile delivery="progressive" bitrate="650" width="1024" height="768" type="video/mp4"><![CDATA[http://s3.amazonaws.com/openplatform-apps/f3da8360-f766-0132-0257-6c400892c39a]]></MediaFile>
                   </MediaFiles>
                </Linear>
             </Creative>
