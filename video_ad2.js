@@ -59,7 +59,7 @@ playerInstance.setup({
         name: "custom_skin"
     },
     logo: {
-        file: "//monoj-khatua.github.io/rubiconproject_circles.png",
+        file: "rubiconproject_circles.png",
         hide: false,
         position: "top-right"
     },
