@@ -44,7 +44,8 @@ rb_vastTag = window.parent._rbVastTag;
 console.log(rb_vastTag[0]);
 var playerInstance = jwplayer("video-container");
 playerInstance.setup({
-    file: "//content.jwplatform.com/videos/bkaovAYt-640.mp4",
+    //file: "//content.jwplatform.com/videos/bkaovAYt-640.mp4",
+    file: "//monoj-khatua.github.io/blank_video.mp4",
     //image: "/customer/portal/attachments/268131",
     width: '100%',
     height: '100%',
@@ -96,11 +97,6 @@ playerInstance.on("AdError" ,function(event) {
          }*/
     parent_cb("end");
     });
-
-playerInstance.on("complete",function(){
-    console.log("Video Compete");
-    parent_cb("end");
-});
 
 playerInstance.onAdImpression(function(event) {
     var html ="Success! Ad tag number "+ (index+1) +" is now playing!</br>";

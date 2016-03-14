@@ -6,7 +6,7 @@
 
 var iframe_id = "rbvideo_" + ord,
     width = 640,
-    height = 360,
+    height = 350,
     fraction = 0.5,
     tpl = '<div id="canary_' + iframe_id + '"></div><div style="margin: 0; padding: 0; overflow: hidden; display:none" id="div_' + iframe_id + '"><iframe id="' + iframe_id + '" frameborder="0" width="' + width + '" height="' + height + '"></iframe></div>',
     state = "init",
