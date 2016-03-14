@@ -29,8 +29,8 @@
                      <Tracking event="close"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e6350970726f7a03000002&t=close&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
                   </TrackingEvents>
                   <VideoClicks>
-                     <ClickThrough><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e6350970726f7a03000002&t=click&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&rurl=www.testvast.com]]></ClickThrough>
-                     <ClickTracking><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e6350970726f7a03000002&t=firstQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></ClickTracking>
+                      <ClickThrough><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e6350970726f7a03000002&t=click&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&rurl=https://www.audiusa.com]]></ClickThrough>
+                      <ClickTracking><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e6350970726f7a03000002&t=firstQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&rurl=https://www.audiusa.com}]]></ClickTracking>
                   </VideoClicks>
                   <MediaFiles>
                       <MediaFile delivery="progressive" bitrate="333" width="400" height="224" type="video/mp4"><![CDATA[http://monoj-khatua.github.io/Audi_demo1.mp4]]></MediaFile>
