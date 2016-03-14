@@ -278,7 +278,15 @@
 .jw-skin-custom_skin.jw-flag-ads .jw-controlbar .jw-icon-tooltip.jw-icon-volume {
   display: none;
 }
-.jw-skin-custom_skin.jw-flag-ads .jw-logo,
+.jw-skin-custom_skin.jw-flag-ads .jw-logo {
+    display: inline;
+}
+
+.jw-skin-custom_skin.jw-flag-ads .jw-logo.jw-reset.jw-top-right {
+    height: 60px;
+    width: 100px;
+}
+
 .jw-skin-custom_skin.jw-flag-ads .jw-captions {
   display: none;
 }
