@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="2.0">
+   <Ad id="Test Vast Inline">
+      <InLine>
+         <AdSystem>Rubicon Project - DSP Builder</AdSystem>
+         <AdTitle>Test Vast Inline</AdTitle>
+         <Error><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=error&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Error>
+         <Impression><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=imp&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}&price=${AUCTION_PRICE:BF}]]></Impression>
+         <Creatives>
+            <Creative id="199" AdID="55d6e79c70726f0f87000008" sequence="1">
+               <Linear>
+                  <Duration>3.0</Duration>
+                  <TrackingEvents>
+                     <Tracking event="creativeView"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=creativeView&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="start"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=start&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="firstQuartile"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=firstQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="midpoint"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=midpoint&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="thirdQuartile"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=thirdQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="complete"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=complete&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="mute"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=mute&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="unmute"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=unmute&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="pause"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=pause&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="rewind"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=rewind&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="resume"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=resume&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="fullscreen"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=fullscreen&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="expand"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=expand&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="collapse"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=collapse&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="acceptInvitation"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=acceptInvitation&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                     <Tracking event="close"><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=close&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></Tracking>
+                  </TrackingEvents>
+                  <VideoClicks>
+                     <ClickThrough><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=click&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&rurl=www.testvast.com]]></ClickThrough>
+                     <ClickTracking><![CDATA[http://dspbuilder.rubiconproject.com/track?cid=56e634db70726f7a03000000&t=firstQuartile&oid=55a5e2a370726f07db010000&aid=55d6e79c70726f0f87000008&${EXTRA}]]></ClickTracking>
+                  </VideoClicks>
+                  <MediaFiles>
+                      <MediaFile delivery="progressive" bitrate="333" width="400" height="224" type="video/mp4"><![CDATA[http://monoj-khatua.github.io/Audi_demo.mp4]]></MediaFile>
+                  </MediaFiles>
+               </Linear>
+            </Creative>
+         </Creatives>
+      </InLine>
+   </Ad>
+</VAST>
