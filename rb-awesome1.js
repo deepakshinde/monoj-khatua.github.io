@@ -3,7 +3,8 @@
  * Cookie related functions
  */
 
-var login_url= "http://google.com"; // TODO: set the url of preference center
+//var login_url= "http://google.com"; // TODO: set the url of preference center
+var login_url= "http://52.39.39.125/users/sign_in"; 
 
 
 var rbAdtag = parent.rb_adtag;
