@@ -1,0 +1,30 @@
+
+#ad_choice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: white;
+}
+
+#slideout_box {
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    z-index: 1000;
+    background: #eee;
+    border: 1px solid #001A33;
+    min-width: 300;
+    height:100;
+    display: none;
+}
+
+#close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#signin_btn {
+    background: #FFF;
+}
