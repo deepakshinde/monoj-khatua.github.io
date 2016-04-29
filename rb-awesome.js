@@ -25,7 +25,7 @@
             '<div id="ad_container" style="position:absolute;top:0px;left:0px;z-index:1;background-color:black;width:795;height:290;">' +
             '</div>' +
             '<div id="ad_choice">' +
-            '<p> Ad Choices</p>' +
+            '<img src="//monoj-khatua.github.io/rubiconproject_circles.png" style="width:60px;height:15px"></img>' +
             '</div>' +
             '<div id="slideout_box">' +
             '<h3> Ad Preference</h3>'+
