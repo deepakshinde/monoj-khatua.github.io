@@ -2,7 +2,7 @@
 (function() {
     var iframe_id =  "if_" +ord,
     width = 835, height=250;
-    var tpl =  '><iframe id="' + iframe_id + '" frameborder="0" width="' + width + '" height="' + height + '"></iframe>';
+    var tpl =  '<iframe id="' + iframe_id + '" frameborder="0" width="' + width + '" height="' + height + '"></iframe>';
     document.write(tpl);
     //console.log()
     main();
@@ -27,15 +27,24 @@
             '<div id="ad_choice">' +
             '<img src="//monoj-khatua.github.io/rubiconproject_circles.png" style="width:60px;height:15px"></img>' +
             '</div>' +
-            '<div id="slideout_box">' +
-            '<h3> Ad Preference</h3>'+
-            '<div id="close_btn">[x] </div>'+
-            'Is this ad relevent?' +
-            '<input type="radio" name="pref" onclick="javascript: submit()" value="yes">yes</input>' +
-            '<input type="radio" name="pref" onclick="javascript: submit()" value="no">no</input>' +
-            '<br><center><button id="signin_btn">Sign In</button></center>' +
-            ' </div>'+
-            '</div>' +
+            '<div id="pref_panel">' +
+                '<div id="pref_header">'+
+                    '<span id="close_btn">&#10006;</span>'+
+                    '<span class="title">Ad Preference</span>'+
+                '</div>'+
+                '<div id="pref_body">'+
+                    'Is this ad relevent?'+
+                    '<span id="rd_btn" style="float:right">'+
+                    '<input type="radio" name="pref" onclick="javascript: submit()" value="yes">yes</input>'+
+                    '<input type="radio" name="pref" onclick="javascript: submit()" value="no">no</input>'+
+                    '</span><br>'+
+                ' </div>'+ //pref_body
+                '<div id="pref_footer">'+
+                    '<button id="signin_btn">Sign In</button>'+
+                    '<span>Do you want to manage your Ad Preference?</span>'+
+                '</div>'+
+            ' </div>'+//pref_panel
+            //'</div>' +
             '<scr' + 'ipt type="text/javascript" src="//code.jquery.com/jquery-1.12.1.min.js"></scr' + 'ipt>' +
             '<scr' + 'ipt type="text/javascript">setInnerHtml(); </scr' + 'ipt>' +
             '</body>' +

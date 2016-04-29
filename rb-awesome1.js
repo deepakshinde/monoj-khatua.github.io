@@ -110,12 +110,12 @@ $(document).ready(function(){
     $("#ad_choice").click(function(){
         console.log("Click Add choice");
         checkCookie();
-        $("#slideout_box").show();
+        $("#pref_panel").show();
     });
     
     $("#close_btn").click(function(){
         console.log("Click close");
-        $("#slideout_box").hide();
+        $("#pref_panel").hide();
     });
     
     $("#signin_btn").click(function(){
