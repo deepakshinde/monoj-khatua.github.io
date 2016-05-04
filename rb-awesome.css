@@ -11,8 +11,8 @@
     top: 1em;
     right: 1em;
     z-index: 1000;
-    background: #000;
-    border: 1px solid #0099ff;
+    background: #333;
+    border: 1px solid #CF1F2E;
     min-width: 300px;
     height:60%;
     width:60%;
@@ -42,7 +42,7 @@
 }
 
 #pref_header {
-    background: #0099ff;
+    background: #CF1F2E;
 }
 
 #pref_footer {
