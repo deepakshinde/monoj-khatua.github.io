@@ -4,7 +4,7 @@
  */
 
 //var login_url= "http://google.com"; // TODO: set the url of preference center
-var login_url= "http://52.39.39.125/users/sign_in?id",
+var login_url= "http://52.39.39.125/users/sign_in?id=",
     id ="";
 
 
