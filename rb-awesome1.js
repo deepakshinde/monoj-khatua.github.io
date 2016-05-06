@@ -4,11 +4,12 @@
  */
 
 //var login_url= "http://google.com"; // TODO: set the url of preference center
-var login_url= "http://52.39.39.125/users/sign_in"; 
+var login_url= "http://52.39.39.125/users/sign_in?id",
+    id ="";
 
 
 var rbAdtag = parent.rb_adtag;
-console.log("rbAdtag1 = " + parent.rb_adtag);
+console.log("rbAdtag = " + parent.rb_adtag);
 //alert(rbAdtag);
 
 function setInnerHtml()
@@ -22,9 +23,9 @@ function isBrowserCookieEnabled() {
 
 
 function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+    var date = new Date();
+    date.setTime(date.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ date.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
@@ -53,18 +54,18 @@ function checkCookie() {
     }
     var user = getCookie("userid");
     if (user != "") {
-        //TODO: If an existing useri
-        console.log("Cookie already present, id: "+ user);
+        //TODO: If an existing user
+        //console.log("Cookie already present, id: "+ user);
 
     } else {
         // New user
-        //username = prompt("Please enter your name:", "");
         //user = createUser(username);
         user = createUser("");
         if (user != "" && user != null) {
             setCookie("userid", user, 365);
         }
     }
+    id = user;
 }
 
 
@@ -81,14 +82,51 @@ function createUser(username){
     s4() + '-' + s4() + s4() + s4();
 }
 
+
 function opennewtab(url )
 {
     var win=window.open(url, '_blank');
 }
 
+
 function signinClick(){
     console.log("In Signin click");
-    opennewtab(login_url);
+    opennewtab(login_url + id);
+}
+
+
+function generateLoginUrl(){
+    //loginurl?id=#cookieid
+}
+
+function getUserDetails() {
+    var url ="http://52.39.39.125/get-preference?id="+id;
+    $.get(url, function(data){
+        var name = data.user;
+        var likes = data.like;
+        var dislikes = data.dislike;
+        var like_str = " Likes : ";
+        var dislike_str = " Dislikes : ";
+        if(data.user !=""){
+            console.log("User "+ name +" loaded");
+        }
+        $.each(likes, function(index, value){
+            console.log(value);
+            like_str += value;
+            like_str += ", ";
+        });
+        
+        $.each(dislikes, function(index, value){
+            console.log(value);
+            dislike_str += value;
+            dislike_str += ", ";
+        });
+
+        alert("User "+ name +" loaded with preferences "+ like_str + " "+ dislike_str);
+    })
+    .fail(function() {
+       alert( "User not yet signed in" );
+     });
 }
 
 /*****************
@@ -100,24 +138,44 @@ function createAdTag(originalTag) {
 }
 */
 
+checkCookie();
+getUserDetails();
+
+/*
+ * likeStatus 1 user liked the add.
+ *            0 user did not like the add.
+ */
+
+function radioSubmit(likeStatus){
+    var url = track_tpl;
+    url = url.replace("${COOKIE_ID}", id);
+    url = url.replace("${USER_ID}", uid);
+    url = url.replace("${STATUS}", likeStatus);
+    var ad_id = Math.floor(Math.random()*1000);
+    url = url.replace("${AD_ID}", ad_id.toString());
+    //$.get(url);
+    jQuery.get(url);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Iframe loaded");
 });//TODO:check cookie here and prompt accordingly.
 
+
 $(document).ready(function(){
     console.log("Document Ready");
-    
+
     $("#ad_choice").click(function(){
         console.log("Click Add choice");
-        checkCookie();
+        //checkCookie();
         $("#pref_panel").show();
     });
-    
+
     $("#close_btn").click(function(){
         console.log("Click close");
         $("#pref_panel").hide();
     });
-    
+
     $("#signin_btn").click(function(){
         signinClick();
     });

@@ -35,8 +35,8 @@
                 '<div id="pref_body">'+
                     'Is this ad relevent?'+
                     '<span id="rd_btn" style="float:right">'+
-                    '<input type="radio" name="pref" onclick="javascript: submit()" value="yes">yes</input>'+
-                    '<input type="radio" name="pref" onclick="javascript: submit()" value="no">no</input>'+
+                    '<input type="radio" name="pref" onclick="javascript: radioSubmit(1)" value="yes">yes</input>'+
+                    '<input type="radio" name="pref" onclick="javascript: radioSubmit(0)" value="no">no</input>'+
                     '</span><br>'+
                 ' </div>'+ //pref_body
                 '<div id="pref_footer">'+
