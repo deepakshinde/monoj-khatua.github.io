@@ -1,6 +1,6 @@
 
 (function() {
-    var iframe_id =  "if_" +ord,
+    var iframe_id =  "if_" +ord;
     width = 835, height=250;
     var tpl =  '<iframe id="' + iframe_id + '" frameborder="0" width="' + width + '" height="' + height + '"></iframe>';
     document.write(tpl);
