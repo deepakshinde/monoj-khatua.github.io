@@ -115,7 +115,7 @@ function getUserDetails() {
             like_str += value;
             like_str += ", ";
         });
-        
+
         $.each(dislikes, function(index, value){
             console.log(value);
             dislike_str += value;
@@ -125,7 +125,7 @@ function getUserDetails() {
         alert("User "+ name +" loaded with preferences "+ like_str + " "+ dislike_str);
     })
     .fail(function() {
-       alert( "User not yet signed in" );
+       console.log("User not yet signed in");
      });
 }
 
