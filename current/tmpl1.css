@@ -39,7 +39,8 @@ body {
     background: #FFF;
     width:80px;
     height: 25px;
-    float: right;
+    border-style: none;
+    /*float: right;*/
 }
 
 #pref_body {
@@ -56,6 +57,11 @@ body {
 }
 .t1 {
     padding: 5px 10px;
+}
+
+#btn_holder {
+    float: right;
+    padding: 0px 10px 0px 0px;
 }
 main {
     position: fixed;
