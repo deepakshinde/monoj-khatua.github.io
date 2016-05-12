@@ -26,7 +26,7 @@
             '<div id="ad_container" style="position:absolute;top:0px;left:0px;z-index:1;background-color:black;width:795;height:290;">' +
             '</div>' +
             '<div id="ad_choice">' +
-                '<img src="rubiconproject_circles.png" style="width:60px;height:15px"></img>' +
+                '<img src="//monoj-khatua.github.io/rubiconproject_circles.png" style="width:60px;height:15px"></img>' +
             '</div>' +
             '<div id="pref_panel">' +
             '<div id="close_btn">&#10006;</div>' +
