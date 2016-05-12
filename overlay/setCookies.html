@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+function isBrowserCookieEnabled() {
+    return (navigator.cookieEnabled)?true:false;
+}
+        function setCookie(cname, cvalue, exdays) {
+            var date = new Date();
+            date.setTime(date.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ date.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+        
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        
+        function createUser(username){
+            //TODO: for now creating a random userid later will do it from server 
+            // request the api server to create an id for the user.
+            // Get the userid in response.
+           function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+              .substring(1);
+          }
+          return 'rb-' +s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+            s4() + '-' + s4() + s4() + s4();
+        }
+        
+        function checkCookie(name) {
+            // Check for browser cookie support
+            if (!isBrowserCookieEnabled()){
+                console.log("Browser cookie is disbled");
+                return;
+            }
+            var user = getCookie(name);
+            if (user != "") {
+                //TODO: If an existing user
+                console.log("Px-Cookie already present, id: "+ user);
+        
+            } else {
+                // New user
+                user = createUser("");
+                if (user != "" && user != null) {
+                    setCookie(name, user, 2);
+                    console.log("Px-New cookie is created, Id: " + user);
+                }
+            }
+        }
+
+        checkCookie("userid");
+        console.log("Px-Location : "+ location.href);
+        </script>
+    </body>
+</html>
+

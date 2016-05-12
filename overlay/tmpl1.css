@@ -1,0 +1,79 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%; 
+    max-height: 100%; 
+    font-family:Sans-serif;
+    line-height: 1.5em;
+    color: white;
+    background: #555;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    overflow: hidden; /* Disables scrollbars on the navigation frame. To enable scrollbars, change "hidden" to "scroll" */
+    background: #CF1F2E;
+}
+
+#close_btn,
+#logo {
+    padding:5px 10px;
+}
+
+#logo {
+    float:left;
+}
+
+#close_btn {
+    float: right;
+    cursor: pointer;
+}
+
+#signin_btn {
+    background: #FFF;
+    width:80px;
+    height: 25px;
+    float: right;
+}
+
+#pref_body {
+    padding: 15px 10px;
+}
+
+#pref_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height:25px;
+    width: 100%;
+    background: #333;
+}
+.t1 {
+    padding: 5px 10px;
+}
+main {
+    position: fixed;
+    top: 50px; /* Set this to the height of the header */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #555;
+}
+
+/*IE6 fix*/
+* html body{
+    padding: 50px 0 0 0; /* Set the first value to the height of the header */
+}
+
+* html main{
+    height: 100%;
+    width: 100%;
+}
+

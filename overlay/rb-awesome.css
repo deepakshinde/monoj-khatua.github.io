@@ -1,0 +1,67 @@
+
+#ad_choice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#pref_panel {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 1000;
+    background: #333;
+    border: 1px solid #CF1F2E;
+    min-width: 300px;
+    height: 60%;
+    width: 60%;
+    display: none;
+    color: white;
+}
+
+#close_btn {
+    position: absolute;
+    top: 0;
+    right:0;
+    /*float: right;*/
+    cursor: pointer;
+    z-index: 3000;
+}
+
+#signin_btn {
+    background: #FFF;
+    width:80px;
+    height: 25px;
+    float: right;
+    padding: 5px 10px;
+}
+
+#pref_header,
+#pref_footer {
+    padding: 5px 10px;
+}
+
+#pref_body {
+    padding: 15px 10px;
+}
+
+#pref_header {
+    background: #CF1F2E;
+    /*background: #0099ff;*/
+}
+
+#pref_footer {
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    height:25px;
+}
+
+#tmpl1{
+    overflow:hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 0;
+}

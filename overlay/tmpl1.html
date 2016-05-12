@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>pref panel </title>
+        <link href="tmpl1.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script type="text/javascript" src="//test-rb/tmpl1.js"></script>
+        <header id="header">
+        <!--<span id="close_btn">&#10006;</span> -->
+        <span id="logo" class="title">Ad Preference</span>
+        </header>
+
+        <main>
+        <div id="pref_body">
+            Is this ad relevent?
+            <span id="rd_btn" style="float:right">
+                <input type="radio" name="pref" onclick="javascript: radioSubmit(1)" value="yes">yes</input>
+                <input type="radio" name="pref" onclick="javascript: radioSubmit(0)" value="no">no</input>
+            </span>
+        </div>
+        <div id="pref_footer">
+            <button id="signin_btn">Sign In</button>
+            <span class="t1">Manage your Preference</span>
+        </div>
+        </main>
+    </body>
+</html>
