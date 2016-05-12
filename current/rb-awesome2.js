@@ -35,7 +35,7 @@ $(document).ready(function(){
 function createIframe(){
     var iframe = document.createElement('iframe');
     // We may need to pass few url  parameters to the src url.
-    iframe.src = '//test-rb/tmpl1.html';
+    iframe.src = '//monoj-khatua.github.io/current/tmpl1.html';
     iframe.scrolling ='no';
     iframe.id = "tmpl1";
     document.getElementById("pref_panel").appendChild(iframe);
